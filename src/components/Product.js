@@ -1,15 +1,27 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React from "react";
 
-const Product = () => {
+const Product = ({
+  id,
+  title,
+  price,
+  description,
+  category,
+  image,
+  rating,
+}) => {
   return (
-      <article className="product">
-      <img src="" alt="" />
+    <article className="product">
+      <img src={image} alt="" />
       <div className="product__details">
-        <h4 className="product__title">product title</h4>
-        <p>Price: $ product price</p>
-        <p>Rating: product rating rate/5</p>
-        <p className="product__desc">Description: product.description</p>
+        <h4 className="product__title">{title}</h4>
+        <p>Price: $ {price}</p>
+        <p>
+          Rating: {rating.rate}
+          /5
+        </p>
+        <p>Count : {rating.count}</p>
+        <p className="product__desc">Description: {description}</p>
         <button className="product__btn btn">Add to cart</button>
       </div>
     </article>
